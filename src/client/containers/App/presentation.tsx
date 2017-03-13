@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Footer } from 'ui';
 import { SetIsMobileAction } from './actions';
 import { State } from './state';
 import { Main } from './styles';
@@ -41,6 +42,9 @@ export default class Feature extends React.Component<FeatureProps, undefined> {
     return (
       <Main>
         {children}
+        <Footer boxSize="small" backgroundColor="#888888">
+          Hello footer
+        </Footer>
       </Main>
     );
   }

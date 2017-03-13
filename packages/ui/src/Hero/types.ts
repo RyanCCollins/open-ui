@@ -1,11 +1,11 @@
 import * as React from 'react';
 import Hero from './';
 
-interface Props extends React.Props<typeof Hero> {
+interface Props extends React.HTMLProps<typeof Hero> {
   backgroundColor?: string;
   background?: string;
   parallax?: boolean;
-  size?: 'small' | 'medium' | 'large' | 'full';
+  boxSize?: 'small' | 'medium' | 'large' | 'full';
 }
 
 export default Props;

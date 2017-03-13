@@ -1,9 +1,9 @@
 const styled = require('styled-components').default;
+import {
+  BoxStyles,
+} from '../Box/styles';
 
 export const FooterComponent = styled.footer`
-  background: ${(props) => props.color};
-  height: 300px;
-  padding-top: 50px;
-  text-align: center;
+  ${BoxStyles}
   width: 100%;
 `;

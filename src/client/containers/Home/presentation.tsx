@@ -15,7 +15,7 @@ export default function HomePresentation({
       <Hero
         parallax
         background="https://github.com/RyanCCollins/cdn/blob/master/space.jpg?raw=true"
-        size="full"
+        boxSize="full"
       >
         <Box full style={{ flexGrow: 1 }} alignItems="center" justifyContent="center">
           <Headline margin="none" fontSize="xlarge" className="headline" color={theme.white1}>
@@ -31,11 +31,12 @@ export default function HomePresentation({
           About
         </Headline>
         <Article
+          alignItems="center"
+          backgroundColor={theme.white1}
           pad="medium"
           boxSize="xlarge"
-        >
-          Coming soon
-        </Article>
+          content={`# Coming soon`}
+        />
       </Section>
     </Box>
   );
