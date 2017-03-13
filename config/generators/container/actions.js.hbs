@@ -1,0 +1,28 @@
+import { PayloadAction } from '../../types';
+import { ErrorType } from './types';
+import {
+  LOAD_INITIATION_TYPE,
+  LOAD_SUCCESS_TYPE,
+  LOAD_FAILURE_TYPE,
+  LOAD_CANCEL_TYPE,
+} from './types';
+
+export interface LoadInitiationAction extends PayloadAction<undefined> {
+  type: LOAD_INITIATION_TYPE;
+}
+
+export interface LoadSuccessAction extends PayloadAction<any> {
+  type: LOAD_SUCCESS_TYPE;
+  payload: any;
+}
+
+export interface LoadFailureAction extends PayloadAction<ErrorType> {
+  type: LOAD_FAILURE_TYPE;
+  payload: ErrorType;
+}
+
+export interface LoadCancelAction extends PayloadAction<undefined> {
+  type: LOAD_CANCEL_TYPE;
+}
+
+export type {{ properCase name }}ActionType = LoadInitiationAction | LoadSuccessAction | LoadFailureAction | LoadCancelAction;
