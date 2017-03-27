@@ -1,12 +1,26 @@
-const styled = require('styled-components').default;
+import styled, { css } from 'styled-components';
+import { Props } from './types';
 import remStringFromPX from '../utils';
 import { sizeMap } from './maps';
 
+export const backgroundCss = ({ plain, backgroundColor }: Props) => {
+  if (plain) {
+    return css`
+      background-color: transparent;
+    `;
+  }
+  if (backgroundColor) {
+    return css`
+      background-color: ${(props: Props) => props.backgroundColor};
+    `;
+  }
+};
+
 export const ButtonComponent = styled.button`
+  ${(props: Props) => backgroundCss(props)}
   text-align: center;
-  background-color: ${(props) => props.backgroundColor};
-  color: ${(props) => props.color};
-  font-size: ${(props) => remStringFromPX(sizeMap[props.size])};
+  color: ${(props: Props) => props.color};
+  font-size: ${(props: Props) => remStringFromPX(sizeMap[props.size])};
   border: none;
   color: white;
   padding: 15px 32px;
@@ -17,7 +31,7 @@ export const ButtonComponent = styled.button`
 `;
 
 export const HeroButton = styled.button`
-  background-color: ${(props) => props.backgroundColor};
+  ${(props: Props) => backgroundCss(props)}
   color: ${(props) => props.color};
   padding: 20px 20px;
   line-height: 16px;

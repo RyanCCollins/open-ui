@@ -13,7 +13,7 @@ export interface MarginSizeMap {
   large: number;
 }
 
-export interface HeadingProps extends React.Props<Heading> {
+export interface HeadingProps extends React.HTMLProps<Heading> {
   color?: string;
   textAlign?: string;
   tag?: Tag;

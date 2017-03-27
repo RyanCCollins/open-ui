@@ -3,6 +3,9 @@ import { render } from 'react-dom';
 import RouterApp from './routes';
 const { AppContainer } = require('react-hot-loader');
 import './theming/globalCss';
+import { polyfill } from './utils/smoothscroll';
+
+polyfill();
 
 declare var module: { hot: any };
 

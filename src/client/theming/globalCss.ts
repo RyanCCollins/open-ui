@@ -35,4 +35,43 @@ injectGlobal`
   .headline {
     font-family: 'Megrim', cursive;
   }
+
+  .fade {
+    animation: fadeInUp 2.8s;
+  }
+
+  .down-arrow {
+    animation: bounce 4s 2s infinite;
+    cursor: pointer !important;
+  }
+
+  .down-arrow:focus {
+    outline: thin dotted white;
+    padding: 4px;
+  }
+
+  @keyframes bounce {
+    0%,20%,50%,80%,100% {
+      transform: translateY(0);
+    }
+
+    40% {
+      transform: translateY(-10px);
+    }
+
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0.0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1.0;
+      transform: translateY(0px);
+    }
+  }
 `;

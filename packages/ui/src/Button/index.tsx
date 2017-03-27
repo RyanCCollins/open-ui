@@ -1,49 +1,41 @@
 import * as React from 'react';
-const { HeroButton, ButtonComponent} = require('./styles');
+const { HeroButton, ButtonComponent } = require('./styles');
 import { Size } from './types';
 
-export interface Props extends React.Props<Button> {
+export interface Props extends React.HTMLProps<Button> {
   color?: string;
   backgroundColor?: string;
-  onClick?: (x: any) => any;
-  size?: Size;
+  boxSize?: Size;
   isHero?: boolean;
   borderColor?: string;
-  style?: any;
+  plain?: boolean;
 }
 
 class Button extends React.Component<Props, undefined> {
   public static defaultProps: Props = {
-    color: '#fefefe',
-    backgroundColor: '#c05b4d',
-    borderColor: '#732419',
-    size: 'medium',
+    boxSize: 'medium',
     isHero: false,
-    style: {},
   };
   public render() {
-    if (this.props.isHero) {
+    const {
+      isHero,
+      children,
+      ...rest,
+    } = this.props;
+    if (isHero) {
       return (
         <HeroButton
-          style={this.props.style}
-          borderColor={this.props.borderColor}
-          onClick={this.props.onClick}
-          color={this.props.color}
-          backgroundColor={this.props.backgroundColor}
-          size={this.props.size}
+          {...rest}
         >
-          {this.props.children}
+          {children}
         </HeroButton>
       );
     }
     return (
       <ButtonComponent
-        onClick={this.props.onClick}
-        color={this.props.color}
-        backgroundColor={this.props.backgroundColor}
-        size={this.props.size}
+        {...rest}
       >
-        {this.props.children}
+        {children}
       </ButtonComponent>
     );
   }
