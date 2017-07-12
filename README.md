@@ -1,3 +1,3 @@
-# OPEN UI Docs
+# Open UI Docs
 
-Not much to see here, yet. :smile:
+This is a documentation website for the Open UI framework. Not much to see here, yet. :smile:
