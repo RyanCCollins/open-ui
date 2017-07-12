@@ -1,3 +1,3 @@
 # OPEN UI Docs
 
-# :smile:
+Not much to see here, yet. :smile:
