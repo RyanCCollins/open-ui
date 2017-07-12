@@ -1,3 +1,3 @@
 # OPEN UI Docs
 
-# :fu:
+# :smile:
