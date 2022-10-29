@@ -3,3 +3,6 @@ NOTE: Unfortunately, this project never got off the ground due to focusing inste
 # Open UI
 
 An open source Design System and UI component library built with typescript.
+
+## Components
+Checkout the components [here](https://github.com/RyanCCollins/open-ui/tree/master/packages/ui/src).
