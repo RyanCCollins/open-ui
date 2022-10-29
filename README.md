@@ -1,3 +1,3 @@
-# Open UI Docs
+# Open UI
 
-This is a documentation website for the Open UI framework. Not much to see here, yet. :smile:
+An open source Design System and UI component library.
